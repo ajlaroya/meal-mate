@@ -6,7 +6,7 @@ const CartButton = () => {
 
   return (
     <TouchableOpacity className="cart-btn" onPress={() => {}}>
-      <Image source={images.bag} className="size-5" resizeMode="contain" />
+      <Image source={images.bag} className="!size-5" resizeMode="contain" />
 
       {totalItems > 0 && (
         <View className="cart-badge">

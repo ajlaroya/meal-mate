@@ -11,7 +11,7 @@ import {
   View
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import "./globals.css";
+import "../globals.css";
 
 export default function Index() {
   return (
@@ -71,7 +71,7 @@ export default function Index() {
                 <Text className="paragraph-bold text-dark-100">Australia</Text>
                 <Image
                   source={images.arrowDown}
-                  className="size-3"
+                  className="!size-3"
                   resizeMode="contain"
                 />
               </TouchableOpacity>
