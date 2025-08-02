@@ -95,5 +95,3 @@ export const getCurrentUser = async () => {
     throw new Error(`Failed to get current user: ${error}`);
   }
 };
-
-// 1:55:05
