@@ -6,26 +6,27 @@ import {
   Databases,
   ID,
   Query,
+  Storage,
 } from "react-native-appwrite";
 
 export const appwriteConfig = {
   endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
   platform: "com.mealmate",
-  projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID,
-  databaseId: process.env.EXPO_PUBLIC_APPWRITE_DATABASE_ID,
-  bucketId: process.env.EXPO_PUBLIC_APPWRITE_BUCKET_ID,
+  projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID as string,
+  databaseId: process.env.EXPO_PUBLIC_APPWRITE_DATABASE_ID as string,
+  bucketId: process.env.EXPO_PUBLIC_APPWRITE_BUCKET_ID as string,
   // Collection IDs
-  userCollectionId: process.env.EXPO_PUBLIC_APPWRITE_USER_COLLECTION_ID,
-  categoriesCollectionId:
-    process.env.EXPO_PUBLIC_APPWRITE_CATEGORY_COLLECTION_ID,
-  menuCollectionId: process.env.EXPO_PUBLIC_APPWRITE_MENU_COLLECTION_ID,
-  customizationCollectionId:
-    process.env.EXPO_PUBLIC_APPWRITE_CUSTOMIZATION_COLLECTION_ID,
-  menuCustomizationCollectionId:
-    process.env.EXPO_PUBLIC_APPWRITE_MENU_CUSTOMIZATION_COLLECTION_ID,
+  userCollectionId: process.env
+    .EXPO_PUBLIC_APPWRITE_USER_COLLECTION_ID as string,
+  categoriesCollectionId: process.env
+    .EXPO_PUBLIC_APPWRITE_CATEGORY_COLLECTION_ID as string,
+  menuCollectionId: process.env
+    .EXPO_PUBLIC_APPWRITE_MENU_COLLECTION_ID as string,
+  customizationCollectionId: process.env
+    .EXPO_PUBLIC_APPWRITE_CUSTOMIZATION_COLLECTION_ID as string,
+  menuCustomizationCollectionId: process.env
+    .EXPO_PUBLIC_APPWRITE_MENU_CUSTOMIZATION_COLLECTION_ID as string,
 };
-
-// 2:42:08
 
 export const client = new Client();
 
@@ -36,6 +37,7 @@ client
 
 export const account = new Account(client);
 export const databases = new Databases(client);
+export const storage = new Storage(client);
 const avatars = new Avatars(client);
 
 export const createUser = async ({
