@@ -1,5 +1,7 @@
 import CartButton from "@/components/CartButton";
+import Filter from "@/components/Filter";
 import MenuCard from "@/components/MenuCard";
+import SearchBar from "@/components/SearchBar";
 import { getCategory, getMenu } from "@/lib/appwrite";
 import useAppwrite from "@/lib/useAppwrite";
 import { MenuItem } from "@/type";
@@ -69,9 +71,10 @@ const Search = () => {
               <CartButton />
             </View>
 
-            <Text>Search Input</Text>
+            <SearchBar />
 
-            <Text>Filter</Text>
+            {/* @ts-ignore */}
+            <Filter categories={categories!}/>
           </View>
         )}
         ListEmptyComponent={() =>
