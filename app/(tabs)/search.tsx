@@ -74,7 +74,7 @@ const Search = () => {
             <SearchBar />
 
             {/* @ts-ignore */}
-            <Filter categories={categories!}/>
+            <Filter categories={categories!} />
           </View>
         )}
         ListEmptyComponent={() =>
